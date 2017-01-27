@@ -1,12 +1,13 @@
-from setuptools import setup
+from distutils.core import setup, Extension
+
+module1 = Extension('ciputils', sources = ['cipherutils/ciputils.c'])
 
 setup(name='cipherutils',
-      version='1.0',
+      version='1.0.1',
       description='CRC checker and fast hex2int',
-      url='https://github.com/username/repo',
-      author='Your Name',
-      author_email='email@domain.net',
+      url='https://github.com/AkhilNairAmey/cipherutils',
+      author='Akhil Nair',
+      author_email='akhil.nair@amey.co.uk',
       license='MIT',
-      packages=['module'],
-      install_requires=['numpy>=1.11',
-                        'matplotlib>=1.5'])
+      packages=['cipherutils'],
+      ext_modules = [module1])
