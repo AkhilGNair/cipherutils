@@ -133,7 +133,7 @@ static PyObject* py_response_CRC(PyObject* self, PyObject* args)
 /*
  * Bind Python function names to our C functions
  */
-static PyMethodDef utils_method[] = {
+static PyMethodDef ciputils_method[] = {
   {"command_CRC", py_command_CRC, METH_VARARGS},
   {"response_CRC", py_response_CRC, METH_VARARGS},
   {"hex_to_int", py_hex_to_int, METH_VARARGS},
@@ -143,7 +143,7 @@ static PyMethodDef utils_method[] = {
 /*
  * Python calls this to let us initialize our module
  */
-void initutils()
+void initciputils()
 {
-  (void) Py_InitModule("utils", utils_method);
+  (void) Py_InitModule("ciputils", ciputils_method);
 }
